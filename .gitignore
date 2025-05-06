@@ -1,0 +1,43 @@
+
+# Ignora il file di configurazione che contiene informazioni sensibili
+config.h
+
+# File che potrebbe contenere informazioni sensibili di backup
+config.h.bak
+config_backup.h
+config*.h
+
+# File temporanei del sistema operativo
+.DS_Store
+Thumbs.db
+
+# File generati dall'IDE Arduino
+*.bin
+*.elf
+*.hex
+*.ino.bin
+*.ino.elf
+*.map
+
+# Cartelle generate da PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# File di build e dipendenze
+build/
+debug/
+.vscode/
+
+# File temporanei di ESP-IDF
+sdkconfig
+sdkconfig.old
+
+# Cartella di distribuzione e password WiFi
+dist/
+credentials.h
+secrets.h
+token.h
+
+# File di log
+*.log
