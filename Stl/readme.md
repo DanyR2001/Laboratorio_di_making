@@ -3,6 +3,7 @@ Ho stampato questi modelli con delle impostazioni classiche, utilizzando del PET
 - Infill 15%
 - Altezza layer: 0.2 mm
 - temperatura di stampa 240°
+
 Nei file:
 - Part 2
 - Part 3
