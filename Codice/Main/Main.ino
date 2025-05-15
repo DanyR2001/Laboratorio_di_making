@@ -1,3 +1,4 @@
+#include <HTTPClient.h>
 #include <WiFi.h>
 #include <WebServer.h>
 #include <AHTxx.h>
@@ -213,6 +214,22 @@ void handleRoot() { server.send(200, "text/html", webpage()); }
 void handleRelayOn() { digitalWrite(RELAY_PIN, HIGH); relayState=true; server.send(200,"text/plain","Acceso"); }
 void handleRelayOff(){ digitalWrite(RELAY_PIN, LOW); relayState=false; server.send(200,"text/plain","Spento"); }
 void handleFan() { if(server.hasArg("speed")){ setFanSpeed(server.arg("speed").toInt()); server.send(200,"text/plain","OK"); } else server.send(400,"text/plain","Missing"); }
+void handleLocalSensors() {
+  // Leggi i due sensori locali
+  if (!readSensor1() || !readSensor2()) {
+    server.send(500, "text/plain", "Errore lettura sensori locali");
+    return;
+  }
+  // Costruisci il JSON di risposta
+  String resp = "{";
+  resp += "\"temp1\":" + String(temp1,1) + ",";
+  resp += "\"hum1\":"  + String(hum1,1)  + ",";
+  resp += "\"temp2\":" + String(temp2,1) + ",";
+  resp += "\"hum2\":"  + String(hum2,1);
+  resp += "}";
+  server.send(200, "application/json", resp);
+}
+
 
 void handleStatus(){
   String j = "{";
@@ -296,6 +313,7 @@ void setup() {
   server.on("/relay/off", handleRelayOff);
   server.on("/fan", handleFan);
   server.on("/status", handleStatus);
+  server.on("/localSensors", HTTP_GET, handleLocalSensors);
   server.begin();
   secureClient.setCACert(TELEGRAM_CERTIFICATE_ROOT);
 }
