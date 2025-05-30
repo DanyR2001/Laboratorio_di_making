@@ -53,13 +53,10 @@ Laboratorio_di_making/ <br />
 │       ├── main.ino <br />
 │       └── exampleConfig.h <br />
 ├── Data/                # Dati ambientali campionati dai test <br />
-│   ├── Umidità/ <br />
-│   |   └── exampleConfig.h <br />
-│   |   ├── main.ino <br />
-│   |   └── exampleConfig.h <br />
-│   └── Rumore/ <br />
+│   ├── Umidità/ <br />  # Dati e codice per il test dell'umidità
+│   └── Rumore/ <br />   # Dati fonometrice
 ├── Circuito/            # Schemi elettrici <br />
-├── Documentazione/       # Documentazione aggiuntiva <br />
+├── Documentazione/      # Relazione progetto <br />
 └── README.md<br />
 ## ⚡ Setup e Installazione
 ### 1. Preparazione Hardware
