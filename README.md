@@ -45,16 +45,16 @@ Progetto nato per risolvere problemi di umidità elevata (>80%) in ambienti dome
 
 ## 📂 Struttura del Progetto
 Laboratorio_di_making/
-├── STL_Files/ # File 3D per la stampa
-│ ├── bicchiere_superiore_v3.stl
-│ ├── bicchiere_intermedio_v2.stl
-│ └── bicchiere_inferiore_v2.stl
-├── Arduino_Code/ # Codice sorgente
-│ ├── main.ino
-│ ├── config.h
-│ └── libraries/
-├── Schematics/ # Schemi elettrici
-├── Documentation/ # Documentazione aggiuntiva
+├── STL_Files/           # File 3D per la stampa
+│   ├── bicchiere_superiore_v3.stl
+│   ├── bicchiere_intermedio_v2.stl
+│   └── bicchiere_inferiore_v2.stl
+├── Arduino_Code/        # Codice sorgente
+│   ├── main.ino
+│   ├── config.h
+│   └── libraries/
+├── Schematics/          # Schemi elettrici
+├── Documentation/       # Documentazione aggiuntiva
 └── README.md
 ## ⚡ Setup e Installazione
 ### 1. Preparazione Hardware
