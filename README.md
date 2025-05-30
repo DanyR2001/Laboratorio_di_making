@@ -2,8 +2,6 @@
 
 Un deumidificatore intelligente basato su cella Peltier, controllabile via WiFi e Telegram, progettato per essere economico, modulare e open-source.
 
-![Design 3D](https://via.placeholder.com/400x300?text=Case+Design+V1) ![Assembly](https://via.placeholder.com/400x300?text=Componenti+Assemblati) ![Internals](https://via.placeholder.com/400x300?text=Elettronica+Interna)
-
 ## 🚀 Panoramica
 Progetto nato per risolvere problemi di umidità elevata (>80%) in ambienti domestici, offrendo un'alternativa economica e smart ai deumidificatori commerciali. Combina una cella Peltier con sensori di temperatura/umidità e controllo remoto in un case stampabile in 3D.
 
@@ -35,41 +33,37 @@ Progetto nato per risolvere problemi di umidità elevata (>80%) in ambienti dome
 ## ⚙️ Specifiche Tecniche
 | Caratteristica             | Valore                |
 |----------------------------|-----------------------|
-| Capacità deumidificazione  | 0,3-0,4 L/giorno     |
-| Potenza refrigerante       | ~10W                 |
+| Capacità deumidificazione  | 0,3-0,4 L/giorno      |
+| Potenza refrigerante       | ~10W                  |
 | Consumo energetico         | 24-30W (2,0-2,5A @12V)|
-| Temperatura lato freddo    | 8-18°C               |
-| Rumorosità                 | 37-52 dBA            |
-| Controllo umidità          | 55-65% RH            |
-| Connettività               | WiFi + Telegram Bot  |
+| Temperatura lato freddo    | 8-18°C                |
+| Rumorosità                 | 37-52 dBA             |
+| Controllo umidità          | 55-65% RH             |
+| Connettività               | WiFi + Telegram Bot   |
 
 ## 📂 Struttura del Progetto
-Laboratorio_di_making/
-├── STL_Files/           # File 3D per la stampa
-│   ├── bicchiere_superiore_v3.stl
-│   ├── bicchiere_intermedio_v2.stl
-│   └── bicchiere_inferiore_v2.stl
-├── Arduino_Code/        # Codice sorgente
-│   ├── main.ino
-│   ├── config.h
-│   └── libraries/
-├── Schematics/          # Schemi elettrici
-├── Documentation/       # Documentazione aggiuntiva
-└── README.md
+Laboratorio_di_making/ <br />
+├── STL_Files/           # File 3D per la stampa <br />
+│   ├── bicchiere_superiore_v3.stl <br />
+│   ├── bicchiere_intermedio_v2.stl <br />
+│   └── bicchiere_inferiore_v2.stl <br />
+├── Arduino_Code/        # Codice sorgente <br />
+│   ├── main.ino <br />
+│   ├── config.h <br />
+│   └── libraries/ <br />
+├── Schematics/          # Schemi elettrici <br />
+├── Documentation/       # Documentazione aggiuntiva <br />
+└── README.md<br />
 ## ⚡ Setup e Installazione
 ### 1. Preparazione Hardware
-- Stampa 3D: Stampa tutti i componenti del case usando PLA
-- Assemblaggio: Monta i dissipatori dalla scheda madre AM2
+- Stampa 3D: Stampa tutti i componenti del case usando PLA/PETG
+- Assemblaggio: Monta i dissipatori dalla scheda madre AM2 sulla cella Peltier
 - Cablaggio: Segui lo schema elettrico fornito
 - Montaggio: Assembla tutti i componenti nel case stampato
 
 ### 2. Setup Software
 1. Installa Arduino IDE e le librerie necessarie
-2. Configura ESP32:
-   ```bash
-   # Aggiungi l'URL per i board ESP32
-   https://dl.espressif.com/dl/package_esp32_index.json
-3. Carica il firmware sull'ESP32
+2. Carica il firmware sull'ESP32
 
 ### 3. Configurazione Telegram BotCerca @BotFather su Telegram
 1. Crea un nuovo bot con /newbot
